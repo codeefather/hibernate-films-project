@@ -21,7 +21,7 @@ public class Film {
 
     @Column(columnDefinition = "text")
     @Type(type = "text")
-    private String text;
+    private String description;
 
     @Column(name = "release_year", columnDefinition = "year")
     private Year year;
@@ -44,8 +44,9 @@ public class Film {
 
     @Column(columnDefinition = "enum('G', 'PG', 'PG-13', 'R', 'NC-17')")
     private Rating rating;
-
+    @Column(name = "special_Features", columnDefinition = "set('Trailers', 'Commentaries', 'Deleted Scenes', 'Behind the Scenes')")
     private Feature specialFeatures;
+    //private Feature specialFeatures;
 
     @Column(name = "last_update")
     @UpdateTimestamp
@@ -79,12 +80,12 @@ public class Film {
         this.title = title;
     }
 
-    public String getText() {
-        return text;
+    public String getDescription() {
+        return description;
     }
 
     public void setText(String text) {
-        this.text = text;
+        this.description = text;
     }
 
     public Year getYear() {

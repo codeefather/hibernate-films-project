@@ -12,7 +12,7 @@ public class Address {
     @Id
     @Column(name = "address_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Byte id;
+    private Short id;
 
     private String address;
 
@@ -32,11 +32,11 @@ public class Address {
     @UpdateTimestamp
     private LocalDateTime lastUpdate;
 
-    public Byte getId() {
+    public Short getId() {
         return id;
     }
 
-    public void setId(Byte id) {
+    public void setId(Short id) {
         this.id = id;
     }
 

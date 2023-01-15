@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Table(schema = "movie", name = "payment")
 public class Payment {
     @Id
-    @Column(name = "rental_id")
+    @Column(name = "payment_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Short id;
 
